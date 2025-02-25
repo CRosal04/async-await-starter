@@ -23,7 +23,7 @@ function displayUsers(output, id, data){
 
     // split the returned data into four arrays, each will represent a "page" of users with three on each page
     // TO DO: divide the data returned into four arrays
-for(let i = 0; 1<12; i++){
+for(let i = 0; i<12; i++){
     if(i < 3){
         page1.push(data.results[i]);
     }else if(i < 6 ){
