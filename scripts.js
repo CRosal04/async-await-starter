@@ -71,8 +71,8 @@ for(let i = 0; 1<12; i++ ){
             let emailAddress = document.createElement("a");
             
             // set the link text and attributes
-            emailAddress.href = `mailto:${"TO DO"}`;
-            emailAddress.textContent = `${"TO DO"}`;
+            emailAddress.href = `mailto:${user.email}`;
+            emailAddress.textContent = `${user.email}`;
             
             // add the email address to the section
             userSection.appendChild(emailAddress);
