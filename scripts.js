@@ -34,9 +34,6 @@ for(let i = 0; 1<12; i++){
          page4.push(data.results[i]);
     }
 }
-console.log(page1)
-console.log(page2)
-console.log(page3)
     // displays each user in a section, with semantic markup for their name, email address, and image
     function displayPage(currentPage){
         // TO DO - complete the code to display the JSON data to the page
@@ -242,14 +239,14 @@ console.log(page3)
 // fetch call to the API
 // TO DO - Complete the code to call the API and display the returned data on the page in the correct place
 fetch("https://randomuser.me/api/?results=12&nat=us,gb")
-.then(response => response.json()
+.then(response => response.json())
 .then(data =>{
 console.log(data);
 displayUsers("userPage1", "pagination1", data);
 })
 .catch(error => {
 console.error(error.message);
-});
+})
 
 // async/await call to the same API
 // TO DO - Complete the code to call the API using an async function
