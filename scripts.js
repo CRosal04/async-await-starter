@@ -232,6 +232,24 @@ function displayUsers(output, id, data){
 
 // async/await call to the same API
 // TO DO - Complete the code to call the API using an async function
+async function getUsers(){
+//make a call to API 
+let response = await fetch("https://randomuser.me/api/?results=12&nat=us,gb");
 
+//if there is an error ,throw that 
+ if (response.error){
+     throw new Error(response.error);
+ }
+//if we don't get an error return JSon if not errors
+return await response.json();
+
+}
 // call our async function and handle the returned promise 
 // TO DO - Complete the code to handle the data returned from the API and display the returned data on the page in the correct place
+getUsers()
+    .then(json => {
+        console.log(json);
+        //displat users from call to the page.
+        displayUsers("userPage2", "pagination2", json);
+    })
+    .catch(e => console.error(e.message));
